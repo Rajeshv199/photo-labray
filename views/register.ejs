@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <%- include("common/header") -%>
+        <title>Register</title>
+        <style>
+            .container {
+                top: 370px;
+            }
+            .container form .data {
+                
+                margin: 50px 0;
+            }
+
+            body {
+                background-image: url("image/logimg3.jpg");
+                background-repeat: no-repeat;
+
+            }
+
+
+            @media(max-width:1000px) {
+                /* .container {
+                top: 40%;
+            } */
+
+            }
+
+            @media(max-width:480px) {
+
+                .logo {
+                    display: none;
+
+                }
+
+                /* for loging page  */
+                .container {
+                    width: 260px;
+                    padding: 10px;
+                }
+
+                form .btn .inner {
+                    background: rgb(60, 133, 58);
+
+                }
+
+                form .btn button {
+                    margin-left: -35px;
+
+                }
+            }
+        </style>
+
+
+</head>
+
+<body>
+
+    <!-- navber start -->
+    <%- include("common/navber") -%>
+
+        <!-- end  -->
+
+        <div class="container">
+            <div class="text">
+                Register
+            </div>
+            <form action="/register" method="POST">
+
+                <div class="data">
+                    <label>Name</label>
+                    <input type="text" placeholder="Full Name" name="name" required>
+                </div>
+
+                <div class="data">
+                    <label>Email</label>
+                    <input type="text" placeholder="Email" name="email" required>
+                </div>
+                <div class="data">
+                    <label>Password</label>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <div class="data">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" name="confirmpassword" required>
+                </div>
+                <div>
+                    <label for="">
+                        <input type="radio" name="gender" value="male" checked>
+                        <span>Male</span>
+                    </label>
+                    <label for="">
+                        <input type="radio" name="gender" value="female">
+                        <span>Female</span>
+                    </label>
+                </div>
+
+                <div class="btn">
+                    <div class="inner"></div>
+                    <button type="submit">Signup</button>
+                </div>
+                <div class="signup-link">
+                    Already have an account? <a href="/login"> Login</a>
+                </div>
+            </form>
+        </div>
+
+
+
+
+</body>
+
+</html>

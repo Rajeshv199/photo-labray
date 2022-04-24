@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("common/header") -%>
+</head>
+<style>
+    .main_header{
+        text-align: center;
+    }
+    .main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.6rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+    outline: none;
+
+}
+</style>
+
+<body>
+
+    <%- include("common/navber") -%>
+
+    <!-- main header  -->
+
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <!-- left side div  -->
+                    <div class="col-md-12 col-12 main_header_left align-items-center">
+                        <figure class="errimg">
+                            <img src="image/404page.jpg" alt="image">
+                        </figure>
+
+                        <h1><%- errorMsg -%> </h1>
+                        <a href="/"> <button>Go Back</button></a>
+                    </div>
+                    <!-- right side div  -->
+
+
+
+                </div>
+            </div>
+        </div>
+
+     
+</body>
+
+</html>

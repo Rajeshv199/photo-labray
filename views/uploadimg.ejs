@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <%- include("common/header") -%>
+    <title>login</title>
+    <style>
+        .container {
+            top: 320px;
+        }
+
+        body {
+            background-image: url("image/logimg3.jpg");
+            background-repeat: no-repeat;
+
+        }
+
+        .data #cate {
+            padding: 5px 120px;
+        }
+
+        .file {
+            padding: 3px;
+        }
+
+        @media(max-width:1000px) {}
+
+        @media(max-width:480px) {
+            
+            .logo {
+                display: none;
+
+            }
+            /* for loging page  */
+            .container {
+                width: 260px;
+
+            }
+
+            form .btn button {
+                margin-left: -55px;
+
+            }
+
+            .data #cate {
+                padding: 5px 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navber start -->
+    <%- include("common/navber") -%>
+
+    <!-- end  -->
+
+    <div class="container">
+        <div class="text">
+            Upload Image
+        </div>
+        <form action="/" method="POST" enctype="multipart/form-data">
+
+            <div class="data">
+                <label>Image Title</label>
+                <input type="text" placeholder="Image Title" name="name" required>
+            </div>
+            <div class="data">
+                <label>Category</label><br>
+                <select name="cate" id="cate" required>
+                    <option name="category" value="Book">Book</option>
+                    <option value="Library">Library</option>
+                    <option value="Room">Room</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Indoor">Indoor</option>
+                    <option value="Study">Study</option>
+                    <option value="Indoor">Indoor</option>
+                </select>
+            </div>
+
+            <div class="data">
+                <label>Image Location</label>
+                <input type="file" id="image" class="file" name="image" value="" required>
+            </div>
+
+            <div class="btn">
+                <div class="inner"></div>
+                <button type="submit">Upload</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

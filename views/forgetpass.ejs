@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <%- include("common/header") -%>
+
+    <title>login</title>
+    <style>
+        body {
+            background-image: url("image/logimg3.jpg");
+            background-repeat: no-repeat;
+
+        }
+        .prg{
+            margin-top: 30px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+   <!-- navber start -->
+   <%- include("common/navber") -%>
+
+<!-- end  -->
+
+    <div class="container">
+        <div class="text">
+            Forgot Password
+        </div>
+        <div class="prg">
+            <p>Enter the email address associated with your account and we’ll send you a link to reset your password.</p>
+        </div>
+        <form action="/login" method="POST">
+            <div class="data">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter Email" required>
+            </div>
+           
+         
+            <div class="btn">
+                <div class="inner"></div>
+                <button type="submit">Submit</button>
+            </div>
+            <div class="signup-link">
+                Don't have an account? <a href="/register">Sign up</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <%- include("common/header") -%>
+    <title>login</title>
+    <style>
+        body {
+            background-image: url("image/logimg3.jpg");
+            background-repeat: no-repeat;
+
+        }
+    </style>
+</head>
+
+<body>
+
+   <!-- navber start -->
+   <%- include("common/navber") -%>
+
+<!-- end  -->
+
+    <div class="container">
+        <div class="text">
+            Login
+        </div>
+        <form action="/login" method="POST">
+            <div class="data">
+                <label>Email</label>
+                
+                <input type="email" name="email" required>
+            </div>
+            <div class="data">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+            <div class="forgot-pass">
+                <a href="/forgetpass">Forgot Password?</a>
+            </div>
+
+            <div class="btn">
+                <div class="inner"></div>
+                <button type="submit">Submit</button>
+            </div>
+            
+            <div class="signup-link">
+                Don't have an account? <a href="/register">Signup</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

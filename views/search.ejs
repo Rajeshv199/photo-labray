@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("common/header") -%>
+
+    <title>Photo Labrary</title>
+</head>
+
+
+<body>
+
+    <!-- navber start -->
+    <%- include("common/navber") -%>
+
+    <!-- end  -->
+
+    <div class="head-container">
+
+        <div class="show-title">
+            <h1>keyword</h1>
+        </div>
+
+        <!-- show img start  -->
+        <div class="head-image ">
+            <% items.forEach(function(image) { %>
+                <div class="imgg">
+                    <a href="imgshow"><img src="data:image/<%=image.img.contentType%>;base64,
+                    <%=image.img.data.toString('base64')%>"></a>
+                </div>
+                <% }) %>
+        </div>
+
+        <!-- end -->
+
+    </div>
+
+    <!-- footer page -->
+    <!-- <%- include("common/footer") -%> -->
+    
+    <!-- end  -->
+
+
+
+</body>
+
+</html>

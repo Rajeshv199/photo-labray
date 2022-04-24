@@ -1,0 +1,36 @@
+<div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><img src="image/index.png" alt=""></a>
+        </div>
+        <div class="serch-bar-cantainer">
+            <div class="serch-icon">
+               <form action="/search" method="post">
+                <input id="serch-input" type="text" value="" placeholder="Search for Photos" name="keyword">
+                <i class="fas fa-search"></i>
+    
+               </form>
+            </div>
+        </div>
+        <div class="menu-bar">
+    
+            <a class="explpre" href="/explore">Explore</a>
+            <a id="login" href="/login">Login</a>
+            <a id="logout" href="/logout">Logout</a>
+            <a class="sub-photo" href="/uploadimg">Submit a photo</a>
+            <a class="s-photo" href="/uploadimg">Submit</a>
+        </div>
+    </nav>
+    <script>
+        
+        
+        if(document.cookie.split("=")[1])
+       {
+            document.getElementById("login").style.display = "none"; 
+        }
+        else{
+            document.getElementById("logout").style.display = "none"; 
+        }
+    </script>
+   
+</div>
